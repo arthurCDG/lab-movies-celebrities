@@ -1,0 +1,16 @@
+<h2>Add a movie to the show!</h2>
+
+<form action="/movies/create" method="POST">
+    <label for="title" class="label">Title</label><input type="text" class="input" name="title" id="title">
+    <label for="gere" class="label">Genre</label><input type="text" class="input" name="genre" id="genre">
+    <label for="plot" class="label">Plot</label><input type="text" class="input" name="plot" id="plot">
+    <label for="cast" class="label">Cast</label>
+    <select class="input" name="cast" id="cast" multiple>
+        {{#if celebrities}}
+            {{#each celebrities}}
+                <option value={{_id}}>{{name}}</option>
+            {{/each}}
+        {{/if}}
+    </select>
+    <button class="btn">Create</button>
+</form>

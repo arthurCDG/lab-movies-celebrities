@@ -1,0 +1,10 @@
+<h1>List of all movies</h1>
+
+{{#if movies}}
+    <ul>
+        {{#each movies}}
+            <li>{{title}}</li>
+            <a href="/movies/{{_id}}">See more details</a>
+        {{/each}}
+    </ul>
+{{/if}}
